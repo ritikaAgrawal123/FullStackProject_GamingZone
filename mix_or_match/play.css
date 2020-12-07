@@ -134,25 +134,6 @@ img {
 #score::after {
   content: " points";
 }
-
-/* FOOTER */
-footer p {
-  color: white;
-  padding: 5px;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-footer p a {
-  color: #ddd;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
 .hidden {
   display: none !important;
 }
@@ -203,7 +184,6 @@ footer p a:hover {
 
 #themes p:hover {
   background: #6186aa;
-/*   background-image: linear-gradient(to top left, #9b59b6, #1abc9c); */
   background-size: 250%;
   color: white;
 }
@@ -249,7 +229,7 @@ footer p a:hover {
 
 #post #again:hover {
   background: #6186aa;
-/*   background-image: linear-gradient(to top left, #9b59b6, #1abc9c); */
+
   background-size: 250%;
   color: white;
   cursor: pointer;

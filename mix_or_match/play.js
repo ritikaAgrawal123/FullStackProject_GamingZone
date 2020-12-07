@@ -1,7 +1,3 @@
-
-// other themes to add ?
-// bigger memory?
-
 var library = {
   pokemon: [
     'https://res.cloudinary.com/beumsk/image/upload/v1547980025/memory/Pokemon/Bulbasaur.png',
@@ -156,7 +152,7 @@ var preElt = document.querySelector("#pre"),
     againElt = document.querySelector("#again");
 
 
-// initiate the game with chosen theme
+
 themesElt.addEventListener("click", function(e) {
   if (e.target.classList.contains("themes")) {
     activateTheme(e.target.id);
@@ -165,7 +161,7 @@ themesElt.addEventListener("click", function(e) {
 });
 
 function activateTheme(theme) {
-  // insert theme in images array
+  
   switch (theme) {
     case "pokemon":
       for (let i=0; i<20; i++) {images.push(library.pokemon[i]);}
@@ -186,7 +182,7 @@ function activateTheme(theme) {
       for (let i=0; i<20; i++) {images.push(library.harrypotter[i]);}
       break;
   }
-  // insert images in memory game
+  
   for (let i=0; i<20; i++) {
     var rand = Math.floor(Math.random() * (images.length-1));
     boxElts[i].innerHTML = "<img src='" + images[rand] + "' alt='image' class='hidden'>";
@@ -195,7 +191,7 @@ function activateTheme(theme) {
 }
 
 
-// Handle the play
+
 mainElt.addEventListener("click", gameLogic);
 
 function gameLogic(e) {
@@ -233,7 +229,7 @@ function gameLogic(e) {
         scoreElt.innerHTML = score;
       }
 
-      // same images
+      
       else {
         score += 10;
         win += 2;
@@ -243,7 +239,7 @@ function gameLogic(e) {
         tempElt2.classList.remove("play");
         scoreElt.innerHTML = score;
 
-        // game won
+        
         if (win === 20) {
           clearTimeout(timer);
           finalElt.innerHTML = "You won " + score + " points <br> in " + time + " seconds";
@@ -258,7 +254,7 @@ function gameLogic(e) {
 againElt.addEventListener("click", resetGame);
 
 function resetGame() {
-  // reset game
+
   tempElt1 = "";
   tempElt2 = "";
   click = -1;
@@ -275,13 +271,3 @@ function resetGame() {
   scoreElt.textContent = score;
 }
 
-// handle focus of the page
-// function checkPageFocus() {
-//   if (document.hasFocus()) {
-//     preElt.classList.remove("hidden");
-//   }
-//   else {
-//     preElt.classList.add("hidden");
-//   }
-// }
-// var checkPageInterval = setInterval(checkPageFocus, 300);
