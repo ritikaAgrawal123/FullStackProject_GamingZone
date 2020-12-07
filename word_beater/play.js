@@ -1,12 +1,6 @@
 window.addEventListener('load', initin);
 
-const levels = {
-  easy: 5,
-  medium: 4,
-  hard: 3
-};
-
-const currentLevel = levels.medium;
+const currentLevel = 5;
 
 let time = currentLevel;
 let score = 0;
